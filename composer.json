@@ -1,0 +1,17 @@
+{
+    "name": "alex/mongodb-demo",
+    "autoload": {
+        "psr-4": {
+            "Alex\\MongodbDemo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hieu",
+            "email": "ngxuanhieu97@gmail.com"
+        }
+    ],
+    "require": {
+        "mongodb/mongodb": "^1.19"
+    }
+}
