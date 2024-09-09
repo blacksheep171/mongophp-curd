@@ -1,16 +1,18 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 
+$username = $_POST['username'] ?? '';
+$email = $_POST['email'] ?? '';
+$name = $_POST['name'] ?? '';
 // insert
 $collection = (new MongoDB\Client)->test->users;
 $insertOneResult = $collection->insertOne([
-    'username' => 'admin2',
-    'email' => 'admin2@gmail.com',
-    'name' => 'Admin 2',
+    'username' => $username,
+    'email' => $email,
+    'name' => $name,
 ]);
-printf("Inserted %d document(s)\n", $insertOneResult->getInsertedCount());
-var_dump($insertOneResult->getInsertedId());
 
+header("Location: index.php");
 //insert many
 
 // $collection = (new MongoDB\Client)->test->users;
